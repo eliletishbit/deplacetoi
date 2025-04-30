@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  
+
   <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/aos/aos.css')}}" rel="stylesheet">
@@ -31,46 +31,46 @@
   <link href="{{asset('css/main.css')}}" rel="stylesheet">
 
   <!-- styles importés de back dashback -->
-  
- 
- 
-  
-  
+
+
+
+
+
 
 <body class="starter-page-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-  
+
       <a href="{{route('accueil')}}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->        
+        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">{{$siteName}}</h1>
       </a>
-  
+
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{{route('accueil')}}" class="active">Accueil<br></a></li>
           <li><a href="{{route('about')}}">A propos</a></li>
           <li><a href="{{route('services')}}">Services</a></li>
-          <li><a href="{{route('devis')}}">Devis</a></li>          
+          <li><a href="{{route('devis')}}">Devis</a></li>
           <li class="dropdown"><a href="#"><span>Services connexes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Emménagement</a></li>              
+              <li><a href="#">Emménagement</a></li>
               <li><a href="#">Entretien nettoyage</a></li>
               <li><a href="#">Electricité</a></li>
               <li><a href="#">Plomberie</a></li>
               <li><a href="#">Jardinage</a></li>
               <li><a href="#">Cuisine</a></li>
-              <li><a href="#">ravitaillement</a></li>              
+              <li><a href="#">ravitaillement</a></li>
             </ul>
           </li>
           <li><a href="{{route('contact')}}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      @auth      
-        <a class="dropdown-item btn-getstarted " href="{{ route('logout') }}" 
+      @auth
+        <a class="dropdown-item btn-getstarted " href="{{ route('logout') }}"
         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <i class="ti-power-off text-primary"></i> Déconnexion
         </a>
@@ -80,13 +80,13 @@
         </form>
       @endauth
       @guest
-        <a class="btn-getstarted" href="{{route('signupview')}}">Je veux demenager</a>
-        <a class="btn-getstarted bg-danger" href="{{route('login')}}">Me connecter</a>        
-      @endguest      
+        <a class="btn-getstarted" href="{{route('signupview')}}">Inscription</a>
+        <a class="btn-getstarted bg-danger" href="{{route('login')}}">Me connecter</a>
+      @endguest
     </div>
   </header>
 
-  
+
 
   <!--les heritages de template du model front-->
 
@@ -104,7 +104,7 @@
 @yield('contenu_loginadmin')
 @yield('contenu_signupadmin')
 
-  
+
 
 
 
@@ -197,11 +197,11 @@
 
   <!-- Main JS File -->
   <script src="{{asset('js/main.js')}}"></script>
-  
+
 
 
   <!-- style importe de back dashback-->
- 
+
 
 </body>
 

@@ -26,11 +26,11 @@
         </div>
     @endif
 
- 
+
 
     <form id="demandeform" action="{{ route('creerdemande') }}" method="POST">
         @csrf
-        
+
         <div class="modal-body">
             <div class="form-group mb-3">
                 <label for="pointdepart">Adresse de départ :</label>
@@ -50,11 +50,11 @@
                 <div class="d-flex flex-wrap">
                     @foreach($vehicules as $vehicule)
                         <div class="vehicle-item m-4" data-id="{{ $vehicule->id }}">
-                            <img 
-                                src="{{ asset('storage/'.$vehicule->imagevehicule) }}" 
-                                alt="{{ $vehicule->libvehicule }}" 
+                            <img
+                                src="{{ asset('./storage/'.$vehicule->imagevehicule) }}"
+                                alt="{{ $vehicule->libvehicule }}"
                                 style="width: 120px; height: 120px; margin: 10px; cursor: pointer; transition: transform 0.2s, border 0.2s; border-radius: 10px;"
-                                onmouseover="this.style.transform='scale(2)'" 
+                                onmouseover="this.style.transform='scale(2)'"
                                 onmouseout="this.style.transform='scale(1)'"
                                 onclick="selectVehicle(this)"
                             >
@@ -83,11 +83,11 @@
 
             <!-- Champ caché pour la date de demande -->
             <input type="hidden" name="datedemande" value="{{ now() }}">
-            
+
              <!-- Bouton pour afficher le récapitulatif -->
         <button type="submit" class="btn btn-info btn-lg"><i class="fa fa-submit"></i> Afficher le récapitulatif</button>
 
-            
+
         </div>
 
     </form>

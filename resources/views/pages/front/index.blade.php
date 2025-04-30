@@ -4,8 +4,8 @@
 
 
 <main class="main">
-  
-    
+
+
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
     <!--logo-->
@@ -27,15 +27,15 @@
             </div>
           @endif
 
-          @if(session()->has('error'))
+          {{-- @if(session()->has('error'))
                   <div class="alert alert-danger">
                       {{session()->get('error')}}
                   </div>
           @elseif(session()->has('success'))
-                  <div  class="alert alert-success">
+                  <div  class="alert alert-warning">
                       {{session()->get('success')}}
                   </div>
-          @endif
+          @endif --}}
 
           <form action="{{route('verifyusereligibility')}}" method="POST" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
             @csrf
@@ -203,7 +203,7 @@
             <div class="badge badge-warning w-65 mb-2">Plus d'infos</div>
             @endguest
           </div>
-          
+
         </div><!-- End Card Item -->
 
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -220,7 +220,7 @@
             <div class="badge badge-warning w-65 mb-2">Plus d'infos</div>
             @endguest
             </div>
-          
+
         </div><!-- End Card Item -->
 
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
@@ -355,15 +355,15 @@
             Notre équipe est composée de professionnels expérimentés, formés pour gérer chaque aspect du déménagement avec soin et efficacité, assurant la sécurité de vos biens.
           </p>
           <p>
-            Notre équipe s'engage à offrir un service de qualité, en respectant les délais et en répondant à 
-            vos besoins spécifiques. Votre satisfaction est notre priorité, et nous mettons tout en œuvre 
+            Notre équipe s'engage à offrir un service de qualité, en respectant les délais et en répondant à
+            vos besoins spécifiques. Votre satisfaction est notre priorité, et nous mettons tout en œuvre
             pour y parvenir.
           </p>
           @auth
           <div class="badge badge-info">Plus d'infos</div>
           @endauth
         </div>
-       
+
       </div><!-- Features Item -->
 
       <div class="row gy-4 align-items-center features-item">
@@ -408,7 +408,7 @@
 
   </section><!-- /Features Section -->
 
- 
+
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials section dark-background">
 
@@ -516,7 +516,7 @@
               </div>
               <p>
                 <i class="bi bi-quote quote-icon-left"></i>
-                <span> 
+                <span>
                   Je ne peux que remercier {{$siteName}} pour leur incroyable service. Leur équipe est compétente, attentive et a su répondre à toutes mes attentes. Un déménagement réussi, je les recommande sans réserve !
                 </span>
                 <i class="bi bi-quote quote-icon-right"></i>
@@ -590,10 +590,10 @@
               <i class="faq-icon bi bi-question-circle"></i>
               <h3>J'ai besoin d'un service connexe. Que faire?</h3>
               <div class="faq-content">
-                <p>Si vous ressentez le besoin d'un service connexe ou supplémentaire dans le cadre de votre démenagement(exemple: emménagement, electricité, nettoyage, plomberie etc), ecrivez nous ou contactez nous par email 
+                <p>Si vous ressentez le besoin d'un service connexe ou supplémentaire dans le cadre de votre démenagement(exemple: emménagement, electricité, nettoyage, plomberie etc), ecrivez nous ou contactez nous par email
                   et nous vous mettrons en contact avec un de nos agents spécialisés. NB: il est à noter que les frais liés aux services connexes ne sont
-                pas dans le montant du démengement affiché sur votre devis. les services connexes sont payés 
-              en main propre au prestataire ou agent specilisé après service rendu. le client doit s'assurer de remplir le devis que 
+                pas dans le montant du démengement affiché sur votre devis. les services connexes sont payés
+              en main propre au prestataire ou agent specilisé après service rendu. le client doit s'assurer de remplir le devis que
             l'agent specilisé lui aura fourni contenant bien les infos et le logo de l'entreprise </p>
               </div>
               <i class="faq-toggle bi bi-chevron-right"></i>
@@ -608,7 +608,7 @@
                   lorsque le déménagement a été effective et que vous arrivez à destination.
                 A l'arrivée, le chauffeur depuis son interface vous fera payer le trajet en soumettant un ordre de paiement.
                 Il devra spécifié pour cela le montant du trajet, et le numero mobile money du client.
-                Un code de confirmation(comme cela se fait d'habitude ) vous sera envoyé. Communiquez le au chauffeur pour valider la transaction.  
+                Un code de confirmation(comme cela se fait d'habitude ) vous sera envoyé. Communiquez le au chauffeur pour valider la transaction.
                 </p>
               </div>
               <i class="faq-toggle bi bi-chevron-right"></i>
@@ -632,4 +632,3 @@
 @endsection()
 
 
-  
